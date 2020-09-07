@@ -1,12 +1,11 @@
-import random
-import os
-import sys
-
-FileNameLength = 100
-char = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-=[];,./!@#$%^&*(){}|_+<>?'
-charList = list(char)
-
 def secureErase(file, passes, securityLevel):
+    import random
+    import os
+    import sys
+
+    FileNameLength = 100
+    charList = list('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-=[];,./!@#$%^&*(){}|_+<>?')
+
     #Check if the file exists
     if not os.path.exists(file):
         sys.exit(str(file) + " does not exist")
